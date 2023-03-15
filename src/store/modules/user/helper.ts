@@ -15,7 +15,7 @@ export interface UserState {
 export function defaultSetting(): UserState {
   return {
     userInfo: {
-      avatar: 'src/assets/ruichu_logo.png',
+      avatar: 'https://github.com/alanshi/ChatGPTWeb/blob/main/src/assets/ruichu_logo.png',
       name: '睿畜科技',
       description: 'Star on <a href="" class="text-blue-500" target="_blank" >Github</a>',
     },
