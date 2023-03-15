@@ -12,29 +12,21 @@ const userInfo = computed(() => userStore.userInfo)
 
 <template>
   <div class="flex items-center">
-    <div class="w-10 h-10 overflow-hidden rounded-full">
+    <div class="overflow-hidden">
       <template v-if="isString(userInfo.avatar) && userInfo.avatar.length > 0">
         <NAvatar
-          size="large"
-          round
+          size="48"
+          
           :src="userInfo.avatar"
           :fallback-src="defaultAvatar"
         />
       </template>
       <template v-else>
-        <NAvatar size="large" round :src="defaultAvatar" />
+        <NAvatar size="48"  :src="defaultAvatar" />
       </template>
     </div>
     <div class="ml-2">
-      <h2 class="font-bold text-md">
-        {{ userInfo.name ?? 'AnchorPoint' }}
-      </h2>
-      <p class="text-xs text-gray-500">
-        <span
-          v-if="isString(userInfo.description) && userInfo.description !== ''"
-          v-html="userInfo.description"
-        />
-      </p>
+
     </div>
   </div>
 </template>
