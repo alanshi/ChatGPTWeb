@@ -15,14 +15,15 @@ const userInfo = computed(() => userStore.userInfo)
     <div class="overflow-hidden" >
       <template v-if="isString(userInfo.avatar) && userInfo.avatar.length > 0">
         <NAvatar
-          
-          :size="135"
+        :size="96"
           :src="userInfo.avatar"
           :fallback-src="defaultAvatar"
         />
       </template>
       <template v-else>
-        <NAvatar   :src="defaultAvatar" />
+        <NAvatar      
+          :size="96"
+          :src="defaultAvatar" />
       </template>
     </div>
     <div class="ml-2">
